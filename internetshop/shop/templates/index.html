@@ -7,22 +7,7 @@
     <a href="/aboutus">О нас</a>
 </div>
 <div class="productList">
-<div  class="product" >
-    <img src="https://nevateka.ru/upload/iblock/8cd/ysqt9onx3dnxs0gf8en7l8aeazouv0rs/100050956379b0.webp"/>
-    <div>
-        <h2>Ноутбук</h2>
-        <p>
-            Ноутбук- стильное и мощное устройство для работы и развлечений.
-            Легкий и компактный, он отлично подойдет как для работы в офисе,
-            так и для развлечений дома или в путешествиях.
-        </p>
-    </div>
-    <div class="price">
-        <h3>89.900</h3>
-        <button>Купить</button>
-    </div>
-
-</div>
+{% for product in products %}
 <div class="product">
   <img src="https://avatars.mds.yandex.net/i?id=406c0af56169ad58792b59b7c8e558644d61d227-5305509-images-thumbs&n=13"/>
     <div>
@@ -39,6 +24,5 @@
         <button>Купить</button>
     </div>
 </div>
-</div>
-
+{% endfor %}
 

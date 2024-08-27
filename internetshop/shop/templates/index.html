@@ -9,18 +9,15 @@
 <div class="productList">
 {% for product in products %}
 <div class="product">
-  <img src="https://avatars.mds.yandex.net/i?id=406c0af56169ad58792b59b7c8e558644d61d227-5305509-images-thumbs&n=13"/>
+  <img src="{{product.image_url}}"/>
     <div>
-        <h2>Телефон</h2>
+        <h2>{{product.name}}</h2>
         <p>
-            Телефон представляет собой уникальное сочетание элегантного дизайна,
-            передовых технологий и высокой производительности.
-            Это устройство станет незаменимым спутником в повседневной жизни,
-            удовлетворяя высокие требования современных потребителей.
+            {{product.description}}
         </p>
     </div>
     <div class="price">
-        <h3>90.990</h3>
+        <h3>{{product.price}} ₽</h3>
         <button>Купить</button>
     </div>
 </div>

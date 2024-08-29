@@ -9,10 +9,10 @@
 <div class="productList">
 {% for product in products %}
 <div class="product">
-  <img src="{{product.image_url}}"/>
+  <img class="productPreview" src="{{product.image_url}}"/>
     <div>
         <h2>{{product.name}}</h2>
-        <p>
+        <p style="height:100%">
             {{product.description}}
         </p>
     </div>

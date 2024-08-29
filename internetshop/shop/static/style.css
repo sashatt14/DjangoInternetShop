@@ -18,13 +18,20 @@ h1{
     margin-right:20px;
 
 }
-img{
+.productPreview{
     width: 250px;
     height: 175px;
 
 }
+.productImage{
+    max-width: 50%
+    max-height:50%
+}
 .product{
+
     display: flex;
+    flex-direction:row;
+    min-height:250;
     margin-top:20px;
     border-radius:20px;
     background-color:white;
@@ -94,3 +101,6 @@ width: 50%;
 display:flex;
 flex-direction:row;
 }
+
+
+

@@ -1,1 +1,23 @@
-Product
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<div class="navigation">
+    <h1><span class="wordh1">Gadget</span>Mart</h1>
+    <a href="/">Главная</a>
+    <a href="/products">Товары</a>
+    <a href="/aboutus">О нас</a>
+</div>
+
+
+<div class="productDetails">
+    <img src="/static/i.webp">
+    <div>
+        <h1>NameProduct</h1>
+        <div>
+            <p>Описание</p>
+        </div>
+        <div class="cost">
+            <p>цена</p>
+            <button>Купить</button>
+        </div>
+    </div>
+</div>

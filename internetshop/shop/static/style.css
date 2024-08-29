@@ -20,7 +20,7 @@ h1{
 }
 img{
     width: 250px;
-    height: 175px
+    height: 175px;
 
 }
 .product{
@@ -30,7 +30,7 @@ img{
     background-color:white;
     padding:15px;
 
-    width:60%;
+    width:70%;
 }
 h2{
     width: 200px;
@@ -79,4 +79,18 @@ button {
 margin-left:auto;
 text-align:center;
 
+}
+.productDetails{
+background:white;
+display:flex;
+flex-direction:row;
+margin-left:auto;
+margin-right:auto;
+
+width: 50%;
+
+}
+.cost{
+display:flex;
+flex-direction:row;
 }

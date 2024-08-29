@@ -48,7 +48,7 @@ button{
     align-items:center;
     justify-content: center;
     background-color: white;
-    padding: 0; 
+    padding: 0;
     margin: 0;
     height: 70px;
 }
@@ -78,4 +78,5 @@ button {
 .price{
 margin-left:auto;
 text-align:center;
+
 }

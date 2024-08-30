@@ -24,8 +24,8 @@ h1{
 
 }
 .productImage{
-    max-width: 50%
-    max-height:50%
+    max-width:50%;
+    max-height:65%;
 }
 .product{
 
@@ -93,13 +93,23 @@ display:flex;
 flex-direction:row;
 margin-left:auto;
 margin-right:auto;
-
-width: 50%;
+margin-top:50px;
+border-radius:20px;
+width:70%;
+height:70%;
 
 }
 .cost{
 display:flex;
 flex-direction:row;
+
+}
+.productTitle *{
+color:black;
+}
+.productTitle{
+margin-top:23px;
+margin-bottom:20px;
 }
 
 

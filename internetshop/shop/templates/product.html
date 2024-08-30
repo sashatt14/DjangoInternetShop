@@ -9,15 +9,18 @@
 
 
 <div class="productDetails">
-    <img class="productImage" src="/static/i.webp">
-    <div>
-        <h1>NameProduct</h1>
+    <img class="productImage" src="{{ product.image_url }}">
+    <div class="productTitle">
+        <h1> {{ product.name }} </h1>
         <div>
-            <p>Описание</p>
+            <p>{{ product.description }}</p>
         </div>
-        <div class="cost">
-            <p>цена</p>
+         <div class="cost">
+            <p>{{ product.price }}</p>
             <button>Купить</button>
-        </div>
+            </div>
+
+
     </div>
 </div>
+

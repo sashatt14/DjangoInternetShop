@@ -9,7 +9,10 @@ def home(request):
         "products": products
     })
 
-def view_product(request):
-    return render(request,'product.html')
+def view_product(request, id):
+    product = Product.objects.filter(id=id).first()
+    return render(request, 'product.html', {
+        'product': product
+    })
                 
 

@@ -112,5 +112,21 @@ margin-top:23px;
 margin-bottom:20px;
 }
 
+.product.Description{
+margin-top:20px;
+padding-top:6px;
+padding-bottom:5px;
+border-radius:20px;
+background:white;
+width:70%;
+margin-left:auto;
+magin-right:auto;
+
+}
+
+.productDescription*{
+margin: 20px;
+}
+
 
 

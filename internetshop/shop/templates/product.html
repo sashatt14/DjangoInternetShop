@@ -2,23 +2,24 @@
 <link rel="stylesheet" href="{% static 'style.css' %}">
 <div class="navigation">
     <h1><span class="wordh1">Gadget</span>Mart</h1>
-    <a href="/">Главная</a>
-    <a href="/products">Товары</a>
-    <a href="/aboutus">О нас</a>
+    <a class="navlink" href="/">Главная</a>
+    <a class="navlink" href="/products">Товары</a>
+    <a class="navlink" href="/aboutus">О нас</a>
 </div>
 
 
 <div class="productDetails">
     <img class="productImage" src="{{ product.image_url }}">
     <div class="productTitle">
-        <h1>{{ product.name }} </h1>
+        <h1>{{ product.name }}</h1>
          <div class="cost">
-            <p>{{ product.price}}</p>
+            <p style="font-style:bold">{{ product.price}}</p>
             <button>Купить</button>
             </div>
     </div>
 </div>
 
 <div class="productDescription">
-    <h2>{{product.description}}</h2>
+    <h2>Описание:</h2>
+    <h2 style="width:70%">{{product.description}}</h2>
 </div>

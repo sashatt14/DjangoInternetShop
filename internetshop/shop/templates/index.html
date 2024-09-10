@@ -2,16 +2,25 @@
 <link rel="stylesheet" href="{% static 'style.css' %}">
 <div class="navigation">
     <h1><span class="wordh1">Gadget</span>Mart</h1>
-    <a href="/">Главная</a>
-    <a href="/products">Товары</a>
-    <a href="/aboutus">О нас</a>
+    <a class="navlink" href="/">Главная</a>
+    <a class="navlink" href="/products">Товары</a>
+    <a class="navlink" href="/aboutus">О нас</a>
 </div>
+
+<form class="filter">
+
+    <input class="searchInput" name="search" />
+    <button style="width:30%">Искать!</button>
+</form>
+
 <div class="productList">
 {% for product in products %}
 <div class="product">
   <img class="productPreview" src="{{product.image_url}}"/>
     <div>
-        <h2>{{product.name}}</h2>
+        <a href="/product/{{ product.id }}">
+            <h2>{{ product.name }}</h2>
+        </a>
         <p>
             {{product.description}}
         </p>
@@ -19,6 +28,7 @@
     <div class="price">
         <h3> {{product.price}} ₽ </h3>
         <button>Купить</button>
+        </form>
     </div>
 </div>
 {% endfor %}

@@ -93,7 +93,7 @@ display:flex;
 flex-direction:row;
 margin-left:auto;
 margin-right:auto;
-margin-top:50px;
+margin-top:20px;
 border-radius:20px;
 width:70%;
 height:70%;
@@ -102,19 +102,23 @@ height:70%;
 .cost{
 display:flex;
 flex-direction:row;
+padding:51px;
+width:50%;
+
+
 
 }
 .productTitle *{
 color:black;
+font-style:normal;
+margin-bottom:20px
 }
 .productTitle{
-margin-top:23px;
-margin-bottom:20px;
+margin-top:20px;
+
 }
 
 .productDescription{
-
-
 background:white;
 display:flex;
 flex-direction:row;
@@ -123,13 +127,44 @@ margin-right:auto;
 margin-top:20px;
 border-radius:20px;
 width:70%;
-height:30%;
+padding-bottom:5px;
+padding-top:5px;
+font-style:normal;
 
 }
 
 .productDescription*{
-margin: 21px;
+margin: 20px;
+width:70%;
+}
+.navlink {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #0021f3;
+    font-size: 20px;
+    cursor: pointer;
 }
 
+.filter{
+ width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.searchInput {
+    font-size: 20px;
+    border: none;
+    background-color: #efefef;
+    padding: 11px;
+    border-radius: 10px;
+    width: 100%;
+    margin-right: 10px;
+}

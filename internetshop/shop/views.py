@@ -11,7 +11,7 @@ def home(request):
     return render(request, "index.html", {
         'products': products,
         'products_found': len(products) > 0,
-        'search' : search,
+        'search' : search if search else '',
     })
 
 

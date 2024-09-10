@@ -9,7 +9,7 @@
 
 <form class="filter">
 
-    <input class="searchInput" name="search" />
+    <input class="searchInput" name="search"  value="{{ search }}" placeholder="Название товара"/>
     <button style="width:30%">Искать!</button>
 </form>
 
@@ -32,4 +32,8 @@
     </div>
 </div>
 {% endfor %}
+
+{% if not products_found %}
+    <h2 style="width:20%"> Ничего не найдено </h2>
+{% endif %}
 

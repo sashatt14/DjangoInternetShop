@@ -9,7 +9,9 @@ def home(request):
     else:
         products = Product.objects.all()
     return render(request, "index.html", {
-        'products': products
+        'products': products,
+        'products_found': len(products) > 0,
+        'search' : search,
     })
 
 

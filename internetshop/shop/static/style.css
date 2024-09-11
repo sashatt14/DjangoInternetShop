@@ -224,3 +224,15 @@ createReview select {
 
     padding: 10px;
 }
+.paymentForm{
+    display:flex;
+    flex-direction:column;
+}
+.paymentForm input{
+    background-color: #e0e0e0;
+    border-radius:20px;
+    border:none;
+    padding:5px;
+}
+
+

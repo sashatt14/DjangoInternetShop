@@ -1,9 +1,12 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import Product, Review
+import telebot
 
+from .config import BOT_TOKEN,CHAT_ID
 
+bot= telebot.TeleBot(BOT_TOKEN)
 # Create your views here.
 
 def home(request):
@@ -43,5 +46,24 @@ def view_product(request, id):
         'reviews': reviews,
     })
 
-def payment(request):
-    return render(request,"payment.html")
+def payment(request,id):
+    product = Product.objects.filter(id=id).first()
+
+    if request.method == "POST":
+        name=request.POST.get('name')
+        address=request.POST.get('address')
+        number=request.POST.get('number')
+        bot.send_message(CHAT_ID,f'''📦 Новый заказ:{product.name}
+Цена:{product.price} рублей
+
+ФИО покупателья:{name}
+Адрес доставки:{address}
+Номер телефона:{number}
+''')
+        return redirect('/success')
+    return render(request,"payment.html",{
+        'product':product
+    })
+
+def success(request):
+    return render(request,'success.html')

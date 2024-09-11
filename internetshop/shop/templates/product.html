@@ -11,10 +11,12 @@
 <div class="productDetails">
     <img class="productImage" src="{{ product.image_url }}">
     <div class="productTitle">
-        <h1>{{ product.name }}</h1>
+        <h1 style="margin-right:20px">{{ product.name }}</h1>
          <div class="cost">
-            <p style="font-style:bold">{{ product.price}}</p>
-            <button>Купить</button>
+            <p style="font-style:bold">{{ product.price}} ₽</p>
+            <a href="/payment/{{ product.id }}">
+             <button>Купить</button>
+             </a>
             </div>
     </div>
 </div>

@@ -26,22 +26,34 @@
 
 <div class="productDescription">
     <h2>Отзывы:</h2>
+  {% for review in reviews %}
     <div class="review">
-        <h3>Автор</h3>
-        <h3>Оценка: <span style="color: green">положительная</span></h3>
-        <h3>Срок использования: 12 месяцев</h3>
-        <p>Отзыв</p>
+        <h3>{{ review.author }}</h3>
+        <h3>Оценка:
+            {% if review.rating == 0 %}
+            <span style="color: red">отрицательная</span>
+            {% else %}
+            <span style="color: green">положительная</span>
+            {% endif %}
+        </h3>
+        <h3>Срок использования: {{ review.usage_duration }} месяцев</h3>
+        <p>{{ review.text }}</p>
     </div>
-    <form class="createReview">
+    {% endfor %}
+    
+    <form class="createReview" method="post">
+        {% csrf_token %}
         <label for="author">Автор:</label>
         <input name="author">
         <label for="rating">Оценка:</label>
-        <input name="rating">
-
+         <select name="rating" style="background-color: #e0e0e0;">
+            <option value="0" >Отрицательная</option>
+            <option value="1" >Положительная</option>
+        </select>
         <label for="duration">Срок использования (в месяцах):</label>
         <input name="duration">
         <label for="review">Текст отзыва:</label>
         <textarea name="review"></textarea>
-        <button>Опубликовать</button>
+        <button id="publishButton">Опубликовать</button>
     </form>
 </div>

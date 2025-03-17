@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-
+def about(request):
+    return render(request, 'about.html')
 from .models import Product, Review
 import telebot
 

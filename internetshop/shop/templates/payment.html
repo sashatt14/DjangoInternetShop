@@ -1,7 +1,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
 <div class="navigation">
-    <h1><span class="wordh1">Gadget</span>Mart</h1>
+    <h1><span class="wordh1">Смех</span>Шоп</h1>
 </div>
 
 <div class="paymentCard">
@@ -10,7 +10,7 @@
     <h2 style="width:100%">К оплате: {{ product.price }} рублей</h2>
     <h3>Реквезиты для перевода:</h3>
     <h2 style="width:100%">+789824518074</h2>
-    <h2 style="width:100%">Иванов И. И.</h2>
+    <h2 style="width:100%">Трубинова А.А</h2>
 <form class="paymentForm" method="post">
     {% csrf_token %}
     <label>Адрес доставки:</label>
